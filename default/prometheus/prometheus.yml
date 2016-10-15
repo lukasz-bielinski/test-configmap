@@ -6,9 +6,9 @@ scrape_configs:
 - job_name: 'etcd'
   target_groups:
   - targets:
-    - 192.168.1.150
-    - 192.168.1.151
-    - 192.168.1.152
+    - 192.168.1.150:2379
+    - 192.168.1.151:2379
+    - 192.168.1.152:2379
 
 - job_name: 'kubernetes_components'
   kubernetes_sd_configs:

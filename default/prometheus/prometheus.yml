@@ -182,3 +182,8 @@ scrape_configs:
   - source_labels: [__meta_kubernetes_pod_name]
     action: replace
     target_label: kubernetes_pod_name
+
+- job_name: 'etcd'
+  target_groups:
+  - targets:
+    - 192.168.1.150

@@ -183,6 +183,13 @@ scrape_configs:
     action: replace
     target_label: kubernetes_pod_name
 
-- job_name: 'etcd'
-  targets:
-    - 192.168.1.150
+- job_name: 'prometheus'
+
+    # Override the global default and scrape targets from this job every 5 seconds.
+  scrape_interval: 5s
+
+    # metrics_path defaults to '/metrics'
+    # scheme defaults to 'http'.
+
+  static_configs:
+    - targets: ['localhost:9090']

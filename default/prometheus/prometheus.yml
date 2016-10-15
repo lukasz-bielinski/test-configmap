@@ -6,16 +6,7 @@
 # `labelmap` relabeling action.
 
 # Scrape config for cluster components.
-
-
 scrape_configs:
-- job_name: 'etcd'
-  target_groups:
-  - targets:
-   - 192.168.1.150:2379
-   - 192.168.1.151:2379
-   - 192.168.1.152:2379
-
 - job_name: 'kubernetes-cluster'
 
   # Default to scraping over https. If required, just disable this or change to
